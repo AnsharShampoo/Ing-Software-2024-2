@@ -27,33 +27,40 @@ class ArbolBinario:
                 self._agregar_recursivo(NodoActual.derecha, valor)
 
     def inorder_traversal(self):
+        camino = []
         if self.raiz is not None:
-            self._inorder_traversal_recursivo(self.raiz)
+            self._inorder_traversal_recursivo(self.raiz, camino)
+            return camino
 
-    def _inorder_traversal_recursivo(self, NodoActual):
+    def _inorder_traversal_recursivo(self, NodoActual, camino):
         if NodoActual is not None:
-            self._inorder_traversal_recursivo(NodoActual.izquierda)
-            print(NodoActual.valor)
-            self._inorder_traversal_recursivo(NodoActual.derecha)
+            self._inorder_traversal_recursivo(NodoActual.izquierda, camino)
+            camino.append(NodoActual.valor)
+            self._inorder_traversal_recursivo(NodoActual.derecha, camino)
+            
     def preorder_traversal(self):
+        camino = []
         if self.raiz is not None:
-            self._preorder_traversal_recursivo(self.raiz)
+            self._preorder_traversal_recursivo(self.raiz, camino)
+            return camino
 
-    def _preorder_traversal_recursivo(self, NodoActual):
+    def _preorder_traversal_recursivo(self, NodoActual, camino):
         if NodoActual is not None:
-            print(NodoActual.valor)
-            self._preorder_traversal_recursivo(NodoActual.izquierda)
-            self._preorder_traversal_recursivo(NodoActual.derecha)
+            camino.append(NodoActual.valor)
+            self._preorder_traversal_recursivo(NodoActual.izquierda, camino)
+            self._preorder_traversal_recursivo(NodoActual.derecha, camino)
 
     def postorder_traversal(self):
+        camino = []
         if self.raiz is not None:
-            self._postorder_traversal_recursivo(self.raiz)
+            self._postorder_traversal_recursivo(self.raiz, camino)
+            return camino
 
-    def _postorder_traversal_recursivo(self, NodoActual):
+    def _postorder_traversal_recursivo(self, NodoActual, camino):
         if NodoActual is not None:
-            self._postorder_traversal_recursivo(NodoActual.izquierda)
-            self._postorder_traversal_recursivo(NodoActual.derecha)
-            print(NodoActual.valor)
+            self._postorder_traversal_recursivo(NodoActual.izquierda, camino)
+            self._postorder_traversal_recursivo(NodoActual.derecha, camino)
+            camino.append(NodoActual.valor)
 
 def valles_caminante(recorrido: str):
     valles = 0
@@ -85,15 +92,15 @@ if __name__ == '__main__':
 
     # inorder traversal
     print("Inorder Traversal:")
-    tree.inorder_traversal()
+    print(tree.inorder_traversal())
 
     # preorder traversal
     print("Preorder Traversal:")
-    tree.preorder_traversal()
+    print(tree.preorder_traversal())
 
     # postorder traversal
     print("Postorder Traversal:")
-    tree.postorder_traversal()
+    print(tree.postorder_traversal())
 
     #Probamos la función de valles_caminante:
     print("Prueba función que cuenta valles:")
