@@ -5,30 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef48732d-bc7e-4609-ac67-2331ff93d137" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/contollers/ControllerPelicula.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contollers/ControllerRenta.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contollers/ControllerUsuario.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/add_pelicula.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/add_renta.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/add_usuario.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/editar_pelicula.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/editar_renta.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/editar_usuario.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pelicula_added.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/renta_added.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/usuario_added.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ver_peliculas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ver_rentas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ver_usuarios.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/flaskProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flaskProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contollers/ControllerAlumno.py" beforeDir="false" afterPath="$PROJECT_DIR$/contollers/ControllerAlumno.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/add_user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user_added.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/bin/python" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/python" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/bin/python3" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/python3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/bin/python3.9" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/python3.9" afterDir="false" />
@@ -127,7 +103,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710809170799</updated>
-      <workItem from="1710809171887" duration="14959000" />
+      <workItem from="1710809171887" duration="15297000" />
     </task>
     <servers />
   </component>
@@ -149,6 +125,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/flaskProject$flaskProject.coverage" NAME="flaskProject Coverage Results" MODIFIED="1710827003969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/flaskProject$flaskProject.coverage" NAME="flaskProject Coverage Results" MODIFIED="1710827277217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
