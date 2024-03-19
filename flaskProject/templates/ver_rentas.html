@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+{% extends "index.html" %}
+{% block content %}
 <head>
     <meta charset="UTF-8">
     <title>Lista de Rentas</title>
@@ -13,27 +15,31 @@
             text-decoration: none;
             border-radius: 5px;
         }
+        .overdue {
+            text-decoration: underline;
+            text-decoration-color: red;
+}
     </style>
 </head>
 <body>
     <h1>Rentas</h1>
     <ul>
         {% for renta in rentas %}
-        <li>
-            Renta ID: {{ renta.idRentar }} - Renta ID: {{ renta.idRentar }} - Película ID: {{ renta.idRentar }}
+        {% set days_diff = (datetime.now() - renta.fecha_renta).days %}
+        <li class="{{ 'overdue' if days_diff > 5 and renta.estatus == 0 else '' }}">
+            Renta ID: {{ renta.idRentar }} - Usuario ID: {{ renta.idUsuario }} - Película ID: {{ renta.idPelicula }}
             - Fecha de Renta: {{ renta.fecha_renta.strftime('%Y-%m-%d') }} - Días de Renta: {{ renta.dias_de_renta }} - Estatus: {{ renta.estatus }}
-        <a href="{{ url_for('renta.editar_renta', id_renta=renta.idRentar) }}" class="button-link">Editar</a>
-        <form action="{{ url_for('renta.renta', id_renta=renta.idRentar) }}" method="post" style="display: inline;">
-                <input type="submit" value="Eliminar" class="button-link" style="background-color: #dc3545;">
-            </form>
+            <a href="{{ url_for('renta.editar_renta', id_renta=renta.idRentar) }}" class="button-link">Editar</a>
         </li>
         {% endfor %}
     </ul>
-    <a href="{{ url_for('renta.renta') }}" class="button-link" style="background-color: #0fe247;">Agregar Renta</a>
+    <a href="{{ url_for('renta.agregar_renta') }}" class="button-link" style="background-color: #0fe247;">Agregar Renta</a>
     {% if get_flashed_messages() %}
         {% for message in get_flashed_messages() %}
             <p>{{ message }}</p>
         {% endfor %}
     {% endif %}
 </body>
+{% endblock %}
 </html>
+

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+{% extends "index.html" %}
+{% block content %}
 <head>
     <meta charset="UTF-8">
     <title>Renta agregada! :)</title>
@@ -7,10 +9,11 @@
 <body>
     <h1>Se agregó una renta mi general!</h1>
     id de la película: {{ idPelicula }}
-    id de la renta: {{ idRenta }}
+    id del Usuario: {{ idUsuario }}
     Fecha de renta: {{ fecha_renta }}
     Días de Renta: {{ dias_de_renta }}
     Estatus actual: {{ estatus }}
     <a href="/renta/">Ver todas las rentas</a>
 </body>
+{% endblock %}
 </html>

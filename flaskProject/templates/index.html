@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
+    <title>{CLONBUSTER}</title>
+    <style>
+        .nav-bar {
+            padding: 10px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .nav-button {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+        .nav-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <a href="/mpb/html">Regresar</a>
+    <div class="nav-bar">
+        <a href="{{ url_for('pelicula.ver_peliculas') }}" class="nav-button">Ver Películas</a>
+        <a href="{{ url_for('usuario.ver_usuarios') }}" class="nav-button">Ver Usuarios</a>
+        <a href="{{ url_for('renta.ver_rentas') }}" class="nav-button">Ver Rentas</a>
+    </div>
+    {% block content %}{% endblock %}
 </body>
 </html>

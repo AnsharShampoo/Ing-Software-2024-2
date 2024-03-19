@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+{% extends "index.html" %}
+{% block content %}
 <head>
     <meta charset="UTF-8">
     <title>Agregar una renta</title>
@@ -7,6 +9,7 @@
 <body>
     <h1>Agregar una Renta</h1>
     <h2>Es obligación del encargado conocer los id de película y usuario</h2>
+    <form method="post">
     <label for="id_usuario">Ingrese el id de usuario:</label>
     <input type="number" name="id_usuario" id="id_usuario"/>
     <br>
@@ -21,5 +24,6 @@
         {% endfor %}
     {% endif %}
 </body>
+{% endblock %}
 </html>
 

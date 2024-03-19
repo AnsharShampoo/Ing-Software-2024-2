@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+{% extends "index.html" %}
+{% block content %}
 <head>
     <meta charset="UTF-8">
     <title>Película agregada! :)</title>
@@ -12,4 +14,5 @@
     Cantidad en el inventario: {{ inventory }}
     <a href="/pelicula/">Ver todas las películas</a>
 </body>
+{% endblock %}
 </html>

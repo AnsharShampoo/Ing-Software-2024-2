@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+{% extends "index.html" %}
+{% block content %}
 <head>
     <meta charset="UTF-8">
     <title>Usuario agregado! :)</title>
@@ -12,4 +14,5 @@
     E-mail: {{ email }}
     <a href="/usuario/">Ver todos los usuarios</a>
 </body>
+{% endblock %}
 </html>
