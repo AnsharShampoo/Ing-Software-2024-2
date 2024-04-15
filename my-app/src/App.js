@@ -1,47 +1,30 @@
-import React, { useState } from "react";
-
-import "./App.css";
-
-import Alumnos from "./components/Alumnos/Alumnos";
-import NuevoAlumno from "./components/NuevoAlumno/NuevoAlumno";
+import './App.css';
+import React from 'react';
+import Clientes from './componentes/Clientes/Clientes';
+import Peliculas from './componentes/Peliculas/Peliculas';
+import Rentas from './componentes/Rentas/Rentas';
+import Menu from './componentes/Menu/Menu';
+import Inicio from './componentes/Inicio/Inicio';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-  const [peliculas, setPeliculas] = useState([
-    { id: 1, title: "Spiderman", director: "Sam R." },
-    { id: 2, title: "Batman", director: "Tim Burton" },
-    { id: 3, title: "Inception", director: "Christopher Nolan", inventario: 4 },
-  ]);
-
-  const [alumnos, setAlumnos] = useState([
-    {
-      nombre: "Fernando",
-      apellido: "Fong",
-      numCta: 313320679,
-    },
-    {
-      nombre: "Valeria",
-      apellido: "Garcia",
-      numCta: 314006088,
-    },
-    {
-      nombre: "Erick",
-      apellido: "Martinez",
-      numCta: 414890123,
-    },
-  ]);
-
-  const agregarAlumno = (alumno) => {
-    const nuevoAlumno = [alumno, ...alumnos];
-    setAlumnos(nuevoAlumno);
-    console.log(nuevoAlumno);
-  };
-
   return (
-    <div className="App">
-      <NuevoAlumno onAgregarAlumno={agregarAlumno} />
-      <Alumnos alumnos={alumnos} />
-    </div>
+    <Router>
+      <div>
+        <h1> CLON-BUSTER</h1>
+        <Menu /> 
+        <div className="content">
+          <Routes>
+            <Route path="/clientes" element={<Clientes />} />
+            <Route path="/peliculas" element={<Peliculas />} />
+            <Route path="/rentas" element={<Rentas />} />
+            <Route exact path="/" element={<Inicio />} /> 
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
-}
+};
+
 
 export default App;

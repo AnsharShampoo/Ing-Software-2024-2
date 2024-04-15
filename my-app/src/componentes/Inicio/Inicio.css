@@ -1,0 +1,16 @@
+.inicio-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .titulo {
+    font-size: 40px;
+    color: #000000; 
+  }
+
+  .parrafo {
+    font-size: 25px;
+    color: #000000; 
+    margin-bottom: 10px; 
+  }
+  

@@ -1,0 +1,31 @@
+.pelicula-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    list-style: none; 
+    border: 1px solid #57b98300;
+    background-color: #84eb80;
+  }
+  
+  .pelicula-detail {
+      font-weight: bold;
+  }
+    
+  .eliminar-button {
+      background-color: #dc3545;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  
+  .editar-button {
+      background-color: #356fdc;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
